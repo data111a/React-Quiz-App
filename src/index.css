@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+}
+
+body{
+  background-color: rgb(41, 41, 41);
+}
+
+a{
+  text-decoration: none;
+}
+label{
+  color: white;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.choose_num_of_questions,.active_choose_num_of_questions{
+  cursor: pointer;
+  background-color: rgb(116, 201, 216);
+  border-radius: 4px;
+  padding: 5px 10px;
+  transition: 0.2s background-color;
+}
+.choose_num_of_questions:hover{
+  background-color: rgb(116, 201, 116);
+}
+.selection_section_category_div,.selection_section_numOfQuestions_div{
+  display: flex;
+  margin: 5px 0 ;
+  gap: 5px;
+}
+.num{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.active_choose_num_of_questions{
+  background-color: blue;
+}
+.category_div,.active_category_div{
+  border-radius: 10px;
+  background-color: rgb(116, 201, 116);
+  cursor: pointer;
+  transition: 0.2s background-color;
+  padding: 5px 10px;
+}
+.category_div:hover{
+  background-color: rgb(116, 201, 216);
+}
+.active_category_div{
+  background-color: blue;
+}
+.App,.selection_section_div,.selection_section_numOfQuestions_div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+}
+.App h1{
+  color: white;
+}
+.selection_section_div,.selection_section_numOfQuestions_div{
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose_category,.stat_game_btn{
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: green;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: rgb(213, 240, 213);
+  text-align: center;
+}
+
+.choose_numOfQuestions{
+  color: blue;
+  border: 1px solid blue;
+  background-color: rgb(206, 206, 236);
+}
+
+.stat_game_btn{
+  border-radius: 30px;
+  padding: 5px 100px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(24, 24, 24);
+  border: none;
+  transition: 0.2s box-shadow;
+}
+.stat_game_btn:hover{
+  box-shadow: 4px 5px 10px rgb(80, 80, 80);
+}
+.question,.score_div *,.error,.loading{
+  color: white;
+}
+
+.results_div,.good_results_div,.average_results_div{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.good_results_div button,.average_results_div button,.results_div button{
+  color: white;
+  cursor: pointer;
+  border-radius: 7px;
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+}
+.good_results_div button{
+  background-color: rgb(54, 182, 31);
+
+}
+.average_results_div button{
+  background-color: rgb(255, 238, 0);
+}
+.results_div button{
+  background-color: rgb(255, 57, 57);
+}
+.answers_div,.submited_answers_div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  margin-top: 70px;
+}
+.answer_div{
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0;
+  background-color: rgb(189, 157, 135);
+  padding: 20px;
+  transition: 0.2s box-shadow;
+}
+
+.correct_answer_div{
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0;
+  background-color: rgb(54, 182, 31);
+  padding: 20px;
+  transition: 0.2s box-shadow;
+}
+.incorrect_answer_div{
+  border: 0.5px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0;
+  background-color: rgb(255, 57, 57);
+  padding: 20px;
+  transition: 0.2s box-shadow;
+}
+.Game{
+  flex-direction: column;
+  display: flex;
+}
+.correct_submit_btn,.submit_btn{
+  padding: 7px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: rgb(54, 182, 31);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.submit_btn{
+  background-color: rgb(255, 57, 57);
+
+}
+.submited_answers_div > div {
+  pointer-events: none;
+}
+.answer_div:hover{
+  box-shadow: 4px 4px 10px rgb(0, 0, 0);
+}
+
+.selection_section_category_div,.selection_section_numOfQuestions_div {
+  color: white;
+}
+
+@media screen and (max-width:1118px){
+  .choose_num_of_questions:hover{
+    background-color: rgb(116, 201, 216);
+  }
+  .category_div:hover{
+    background-color: rgb(116, 201, 116);
+  }
+  .stat_game_btn:hover{
+    box-shadow: none;
+  }
+  .selection_section_category_div{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+  }
+  .answer_div:hover {
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width:700px){
+  .answers_div,.submited_answers_div{
+      grid-template-columns: 1fr;
+  }
+  .selection_section_category_div{
+    grid-template-columns:1fr 1fr 1fr ;
+  }
+}
+@media screen and (max-width:490px){
+  .selection_section_category_div{
+    grid-template-columns:1fr 1fr;
+  }
+}
+@media screen and (max-width:350px){
+  .selection_section_category_div{
+    grid-template-columns:1fr ;
+  }
+}
